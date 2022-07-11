@@ -5,6 +5,10 @@
   </header>
 
   <div class="panel panel-default items">
+  <% if cart.size == 0 %>
+  <h4>Your cart is empty.</h4>
+  <p>Please continue shopping on our <a href='products#index'> homepage</a></p>
+  <% else %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -30,8 +34,10 @@
         </tr>
       </tfoot>
     </table>
+    <% end %>
   </div>
 
+  <% if cart.size > 0 %>
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +54,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>

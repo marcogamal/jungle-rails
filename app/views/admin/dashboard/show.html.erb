@@ -1,2 +1,15 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<div class="order-summary jumbotron">
+  <h4>Product</h4>
+  <h7> There are 
+    <a href="admin/products#index" class="link-primary"> <%= @total_products %> </a> 
+    products in total in the database
+  </h7>
+</div>
+
+<div class="order-summary jumbotron">
+  <h4>Category</h4>
+  <h7> There are 
+    <a href="categories/1" class="link-primary"> <%= @total_categories %> </a> 
+    categories in total in the database
+  </h7>

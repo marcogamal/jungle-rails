@@ -1,0 +1,19 @@
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
+
+  <%= form_tag '/login' do %>
+
+    <form class="dropdown-menu p-4" action="/login" method="POST">
+    <div class="mb-3">
+       Email: <%= text_field_tag  :email, nil, class:'form-control' %>
+    </div> 
+
+    <div class="mb-3">
+      Password: <%= password_field_tag :password, nil, class:'form-control' %>
+    </div>
+
+    <%= submit_tag "Sign in" ,class:'btn btn-primary'%>
+  </form>
+  
+  <% end %>
